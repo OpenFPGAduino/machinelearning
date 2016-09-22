@@ -1,0 +1,3 @@
+[submodule "convnetjs"]
+	path = convnetjs
+	url = https://github.com/karpathy/convnetjs.git
