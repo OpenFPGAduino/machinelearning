@@ -1,0 +1,26 @@
+{
+  "name": "Tensorflow.js",
+  "version": "0.1.0",
+  "description": "Tensorflow backend for opneFPGAduino",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenFPGAduino/machinelearning.git"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "github:tensorflow/tfjs",
+    "@tensorflow/tfjs-node": "^0.1.7",
+    "mosca": "1.1.0"
+  },
+  "author": "Zhizhou Li",
+  "license": "GPL",
+  "readmeFilename": "README.md",
+  "devDependencies": {},
+  "keywords": [
+    "Mqtt",
+    "node"
+  ]
+}
