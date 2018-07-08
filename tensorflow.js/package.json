@@ -4,7 +4,11 @@
   "description": "Tensorflow backend for opneFPGAduino",
   "main": "server.js",
   "scripts": {
+    "postinstall": "yarn upgrade --pattern @tensorflow",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.11.0"
   },
   "repository": {
     "type": "git",

@@ -1,10 +1,10 @@
 const tf = require('@tensorflow/tfjs');
 
 // Load the binding:
-require('@tensorflow/tfjs-node');  // Use '@tensorflow/tfjs-node-gpu' if running with GPU.
+//require('@tensorflow/tfjs-node');  // Use '@tensorflow/tfjs-node-gpu' if running with GPU.
 
 // Set the backend to TensorFlow:
-tf.setBackend('tensorflow');
+//tf.setBackend('tensorflow');
 
 // Train a simple model:
 const model = tf.sequential();
