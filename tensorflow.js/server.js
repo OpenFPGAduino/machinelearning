@@ -18,7 +18,7 @@ const ys = tf.randomNormal([100, 1]);
 model.fit(xs, ys, {
   epochs: 100,
   callbacks: {
-    onEpochEnd: async (epoch, log) => {
+    onEpochEnd: function (epoch, log) {
       console.log(`Epoch ${epoch}: loss = ${log.loss}`);
     }
   }
