@@ -46,6 +46,7 @@ export function startPacman() {
 
 export function predictClass(classId) {
   google.pacman.keyPressed(CONTROL_CODES[classId]);
+  console.log(classId)
   document.body.setAttribute('data-active', CONTROLS[classId]);
 }
 
