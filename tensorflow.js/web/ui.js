@@ -47,6 +47,14 @@ export function startPacman() {
 export function predictClass(classId) {
   google.pacman.keyPressed(CONTROL_CODES[classId]);
   console.log(classId)
+  if (classId == 0)
+    ajax_post('/fpga/api/call/led', [0 ,255,255,255]);
+  else if (classId == 1)
+    ajax_post('/fpga/api/call/led', [0 ,255,0,0]);
+  else if (classId == 2)
+    ajax_post('/fpga/api/call/led', [0 ,0,255,0]); 
+  else 
+    ajax_post('/fpga/api/call/led', [0 ,0,0,255]);   
   document.body.setAttribute('data-active', CONTROLS[classId]);
 }
 
