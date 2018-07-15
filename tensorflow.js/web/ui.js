@@ -41,11 +41,23 @@ export const getDenseUnits = () => +denseUnitsElement.value;
 const statusElement = document.getElementById('status');
 
 export function startPacman() {
-  google.pacman.startGameplay();
+  //google.pacman.startGameplay();
+}
+
+export function ajax_post(url, json) {
+  var xhr = new XMLHttpRequest();
+  var post;
+  xhr.open("post", url, false);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify(json));
+  if (xhr.readyState==4 && xhr.status==200)
+    return (JSON.parse(xhr.responseText));
+  else
+      return null;
 }
 
 export function predictClass(classId) {
-  google.pacman.keyPressed(CONTROL_CODES[classId]);
+  //google.pacman.keyPressed(CONTROL_CODES[classId]);
   console.log(classId)
   if (classId == 0)
     ajax_post('/fpga/api/call/led', [0 ,255,255,255]);
