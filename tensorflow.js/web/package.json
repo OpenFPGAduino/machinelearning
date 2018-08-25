@@ -15,7 +15,7 @@
   "scripts": {
     "watch": "cross-env NODE_ENV=development && yarn run locales:copy && parcel index.html --no-hmr --open",
     "build": "cross-env NODE_ENV=production && yarn run locales:copy &&  parcel build index.html  --no-minify --public-url ./",
-    "locales:copy": "cp -r model dist/model",
+    "locales:copy": "mkdir -p dist;cp -r model dist/model",
     "postinstall": "yarn upgrade --pattern @tensorflow"
   },
   "devDependencies": {
