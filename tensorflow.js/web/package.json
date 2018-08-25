@@ -13,8 +13,9 @@
     "vega-embed": "^3.0.0"
   },
   "scripts": {
-    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open",
-    "build": "cross-env NODE_ENV=production parcel build index.html  --no-minify --public-url ./",
+    "watch": "cross-env NODE_ENV=development && yarn run locales:copy && parcel index.html --no-hmr --open",
+    "build": "cross-env NODE_ENV=production && yarn run locales:copy &&  parcel build index.html  --no-minify --public-url ./",
+    "locales:copy": "cp -r model dist/model",
     "postinstall": "yarn upgrade --pattern @tensorflow"
   },
   "devDependencies": {
