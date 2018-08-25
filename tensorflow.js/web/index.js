@@ -20,6 +20,7 @@ import * as tf from '@tensorflow/tfjs';
 import {ControllerDataset} from './controller_dataset';
 import * as ui from './ui';
 import {Webcam} from './webcam';
+import './model/model.json';
 
 // The number of classes we want to predict. In this example, we will be
 // predicting 4 classes for up, down, left, and right.
@@ -38,7 +39,7 @@ let model;
 // we'll use as input to our classifier model.
 async function loadMobilenet() {
   const mobilenet = await tf.loadModel(
-      'model.json');
+      './model/model.json');
 
   // Return a model that outputs an internal activation.
   const layer = mobilenet.getLayer('conv_pw_13_relu');
