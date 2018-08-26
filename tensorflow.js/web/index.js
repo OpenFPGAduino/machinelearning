@@ -39,7 +39,8 @@ let model;
 // we'll use as input to our classifier model.
 async function loadMobilenet() {
   const mobilenet = await tf.loadModel(
-      './model/model.json');
+      './model/model.json' // 'http://o96gackch.bkt.clouddn.com/model.json' // for yarn watch debug
+    );
 
   // Return a model that outputs an internal activation.
   const layer = mobilenet.getLayer('conv_pw_13_relu');
